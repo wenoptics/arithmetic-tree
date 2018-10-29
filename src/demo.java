@@ -78,6 +78,16 @@ public class demo {
             System.out.println(line);
         }
 
+        // inorder print
+        System.out.println("\ninorder print: ");
+        new TreePrint() {
+            @Override
+            protected void print(String s) {
+                System.out.print(s + "  ");
+            }
+        }.inorderPrint(root);
+        System.out.println("");
+
         double ret = 0;
         try {
             ret = root.calcIntermediately();
@@ -145,6 +155,16 @@ public class demo {
             for (String line : new PrettyTreePrint(root).getPrint()) {
                 System.out.println(line);
             }
+
+            // inorder print
+            System.out.println("\ninorder print: ");
+            new TreePrint() {
+                @Override
+                protected void print(String s) {
+                    System.out.print(s + "  ");
+                }
+            }.inorderPrint(root);
+            System.out.println("");
 
             double ret = 0;
             try {

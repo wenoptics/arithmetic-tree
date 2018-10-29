@@ -36,7 +36,7 @@ public abstract class AMTreeNode<E> {
 
     }
 
-    public abstract double calcIntermediately();
+    public abstract double calcIntermediately() throws Exception;
 
 
 }

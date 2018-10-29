@@ -8,7 +8,7 @@ public class AMOperationNode extends AMTreeNode<ArithmeticMethod<Double>> {
         this.content = ArithmeticHelper.parseFromChar(operationChar);
     }
 
-    public double calcIntermediately() {
+    public double calcIntermediately() throws Exception {
 
         return content.doCalculation(leftNode.calcIntermediately(), rightNode.calcIntermediately());
 

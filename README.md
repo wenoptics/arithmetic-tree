@@ -1,7 +1,7 @@
 # INFSCI 2500 DS - Assignment 4 
 
 ## Assignment Requirement
-[Homework-4.pdf](doc/Homework 4.pdf)
+[Homework-4.pdf](doc/Homework-4.pdf)
 
 ## Demo Entry
 As `src/demo.java`

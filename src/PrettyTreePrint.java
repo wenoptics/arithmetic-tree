@@ -46,10 +46,10 @@ public class PrettyTreePrint {
                     sb.append(' ');
                 }
 
-                String content = colMap.get(c).getValue().toString();
+                String content = colMap.get(c).getContent().toString();
                 if (colMap.get(c).getClass() == AMNumberNode.class) {
                     // fixme: Convert a double back to int. Should be a better way to do this
-                    content = String.format("%.0f", (Double) colMap.get(c).getValue());
+                    content = String.format("%.0f", (Double) colMap.get(c).getContent());
                 }
                 sb.append(content);
                 lastIdx += Math.max(content.length(), 1) - 1;

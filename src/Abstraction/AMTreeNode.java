@@ -4,16 +4,16 @@ import javax.naming.OperationNotSupportedException;
 
 public abstract class AMTreeNode<E> {
 
-    protected E value;
+    protected E content;
     protected AMTreeNode leftNode;
     protected AMTreeNode rightNode;
 
-    public E getValue() {
-        return value;
+    public E getContent() {
+        return content;
     }
 
-    /*public void setValue(E value) {
-        this.value = value;
+    /*public void setContent(E content) {
+        this.content = content;
     }*/
 
     public AMTreeNode getLeftNode() {

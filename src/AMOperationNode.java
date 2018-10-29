@@ -2,26 +2,26 @@ import Abstraction.AMTreeNode;
 import Abstraction.ArithmeticMethod;
 import Arithmetic.ArithmeticHelper;
 
-public class AMOperationNode extends AMTreeNode<ArithmeticMethod> {
+public class AMOperationNode extends AMTreeNode<ArithmeticMethod<Double>> {
 
     public AMOperationNode(char operationChar) {
-        this.value = ArithmeticHelper.parseFromChar(operationChar);
+        this.content = ArithmeticHelper.parseFromChar(operationChar);
     }
 
     public double calcIntermediately() {
 
-        return this.leftNode.calcIntermediately() + this.rightNode.calcIntermediately();
+        return content.doCalculation(leftNode.calcIntermediately(), rightNode.calcIntermediately());
 
         /*double valLeft, valueRight;
         if (this.leftNode.getClass() == AMOperationNode.class) {
             valLeft = ((AMOperationNode) this.leftNode).calcIntermediately();
         } else {
-            valLeft = (double) this.leftNode.getValue();
+            valLeft = (double) this.leftNode.getContent();
         }
         if (this.rightNode.getClass() == AMOperationNode.class) {
             valueRight = ((AMOperationNode) this.rightNode).calcIntermediately();
         } else {
-            valueRight = (double) this.rightNode.getValue();
+            valueRight = (double) this.rightNode.getContent();
         }
         return valLeft + valueRight;*/
     }

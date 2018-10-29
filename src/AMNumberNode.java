@@ -1,18 +1,17 @@
 import Abstraction.AMTreeNode;
-import Abstraction.ArithmeticMethod;
 
 import javax.naming.OperationNotSupportedException;
 
 public class AMNumberNode extends AMTreeNode<Double> {
 
     public AMNumberNode(double number) {
-        this.value = number;
+        this.content = number;
         this.leftNode = null;
         this.rightNode = null;
     }
 
     public double calcIntermediately() {
-        return this.value;
+        return this.content;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package Arithmetic;
+package Abstraction;
 
 public interface ArithmeticMethod<E> {
 

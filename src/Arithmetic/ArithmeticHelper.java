@@ -1,6 +1,8 @@
 package Arithmetic;
 
-public class ArithmeticHelper { 
+import Abstraction.ArithmeticMethod;
+
+public class ArithmeticHelper {
     
     public static ArithmeticMethod parseFromChar(char c) {
         switch (c) {
@@ -8,6 +10,8 @@ public class ArithmeticHelper {
                 return new AMPlus();
             case '-':
                 return new AMMinus();
+            case '*':
+                return new
             // TODO: 10/23/2018  
             default:
                 throw new IllegalArgumentException();

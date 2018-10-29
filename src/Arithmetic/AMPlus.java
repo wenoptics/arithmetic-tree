@@ -1,5 +1,7 @@
 package Arithmetic;
 
+import Abstraction.ArithmeticMethod;
+
 public class AMPlus implements ArithmeticMethod<Double> {
 
     @Override

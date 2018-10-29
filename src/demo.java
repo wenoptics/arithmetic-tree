@@ -5,6 +5,12 @@ import java.util.Random;
 
 public class demo {
 
+    public static void main(String[] args) {
+        runExampleCase();
+        System.out.println("======================\ngenerating 10 random trees");
+        genRandomCases();
+    }
+
     /**
      * The example case from the Homework description.
      *      Result should be -13,
@@ -150,11 +156,5 @@ public class demo {
             System.out.printf("\n\n");
         }
 
-    }
-
-    public static void main(String[] args) {
-        runExampleCase();
-        System.out.println("======================\ngenerating 10 random trees");
-        genRandomCases();
     }
 }

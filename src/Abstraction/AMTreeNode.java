@@ -2,9 +2,11 @@ package Abstraction;
 
 import javax.naming.OperationNotSupportedException;
 
-public class AMTreeNode<E> {
+public abstract class AMTreeNode<E> {
 
     protected E value;
+    protected AMTreeNode leftNode;
+    protected AMTreeNode rightNode;
 
     public E getValue() {
         return value;
@@ -30,12 +32,11 @@ public class AMTreeNode<E> {
         this.rightNode = rightNode;
     }
 
-    protected AMTreeNode leftNode;
-    protected AMTreeNode rightNode;
-
     public AMTreeNode() {
 
     }
+
+    public abstract double calcIntermediately();
 
 
 }

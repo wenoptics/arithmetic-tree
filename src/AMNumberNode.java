@@ -3,12 +3,16 @@ import Abstraction.ArithmeticMethod;
 
 import javax.naming.OperationNotSupportedException;
 
-public class AMNumberNode<E extends Number> extends AMTreeNode<E> {
+public class AMNumberNode extends AMTreeNode<Double> {
 
-    public AMNumberNode(E number) {
+    public AMNumberNode(double number) {
         this.value = number;
         this.leftNode = null;
         this.rightNode = null;
+    }
+
+    public double calcIntermediately() {
+        return this.value;
     }
 
     @Override
@@ -21,7 +25,13 @@ public class AMNumberNode<E extends Number> extends AMTreeNode<E> {
         throw new OperationNotSupportedException();
     }
 
-    public void calcIntermediately() {
+    @Override
+    public AMTreeNode getLeftNode() {
+        return null;
+    }
 
+    @Override
+    public AMTreeNode getRightNode() {
+        return null;
     }
 }

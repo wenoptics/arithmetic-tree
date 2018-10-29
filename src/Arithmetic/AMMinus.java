@@ -9,4 +9,8 @@ public class AMMinus implements ArithmeticMethod<Double> {
         return first - second;
     }
 
+    @Override
+    public String toString() {
+        return "-";
+    }
 }

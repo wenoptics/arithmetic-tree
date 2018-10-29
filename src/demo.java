@@ -13,21 +13,21 @@ public class demo {
         AMTreeNode l3_0 = new AMOperationNode('*');
         AMTreeNode l3_1 = new AMOperationNode('+');
         AMTreeNode l3_2 = new AMOperationNode('*');
-        AMTreeNode l3_3 = new AMNumberNode<Double>((double) 6);
+        AMTreeNode l3_3 = new AMNumberNode((double) 6);
 
         AMTreeNode l4_0 = new AMOperationNode('+');
-        AMTreeNode l4_1 = new AMNumberNode<Double>((double) 3);
+        AMTreeNode l4_1 = new AMNumberNode((double) 3);
         AMTreeNode l4_2 = new AMOperationNode('-');
-        AMTreeNode l4_3 = new AMNumberNode<Double>((double) 2);
-        AMTreeNode l4_4 = new AMNumberNode<Double>((double) 3);
+        AMTreeNode l4_3 = new AMNumberNode((double) 2);
+        AMTreeNode l4_4 = new AMNumberNode((double) 3);
         AMTreeNode l4_5 = new AMOperationNode('-');
 
-        AMTreeNode l5_0 = new AMNumberNode<Double>((double) 3);;
-        AMTreeNode l5_1 = new AMNumberNode<Double>((double) 1);;
-        AMTreeNode l5_2 = new AMNumberNode<Double>((double) 9);;
-        AMTreeNode l5_3 = new AMNumberNode<Double>((double) 5);;
-        AMTreeNode l5_4 = new AMNumberNode<Double>((double) 7);;
-        AMTreeNode l5_5 = new AMNumberNode<Double>((double) 4);;
+        AMTreeNode l5_0 = new AMNumberNode((double) 3);
+        AMTreeNode l5_1 = new AMNumberNode((double) 1);
+        AMTreeNode l5_2 = new AMNumberNode((double) 9);
+        AMTreeNode l5_3 = new AMNumberNode((double) 5);
+        AMTreeNode l5_4 = new AMNumberNode((double) 7);
+        AMTreeNode l5_5 = new AMNumberNode((double) 4);
 
         try {
             root.setLeftNode(l2_0);
@@ -54,6 +54,13 @@ public class demo {
         } catch (OperationNotSupportedException e) {
             e.printStackTrace();
         }
+
+        for (String line : new PrettyTreePrint(root).getPrint()) {
+            System.out.println(line);
+        }
+
+        double ret = root.calcIntermediately();
+        System.out.printf("\nresult = %s%n", ret);
 
     }
 }

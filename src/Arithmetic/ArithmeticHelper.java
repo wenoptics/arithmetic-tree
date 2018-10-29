@@ -11,8 +11,12 @@ public class ArithmeticHelper {
             case '-':
                 return new AMMinus();
             case '*':
-                return new
-            // TODO: 10/23/2018  
+            case 'x':
+            case 'X':
+                return new AMMultiply();
+            case '/':
+            case '÷':
+                return new AMDivide();
             default:
                 throw new IllegalArgumentException();
         }
